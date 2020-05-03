@@ -27,8 +27,8 @@ Metadata for setting the aeneas package up
 
 import io
 
-__author__ = "Alberto Pettarin"
-__email__ = "aeneas@readbeyond.it"
+__author__ = "Akhilesh"
+__email__ = "akki.kr94@gmail.com"
 __copyright__ = """
     Copyright 2012-2013, Alberto Pettarin (www.albertopettarin.it)
     Copyright 2013-2015, ReadBeyond Srl   (www.readbeyond.it)
@@ -36,7 +36,7 @@ __copyright__ = """
 """
 __license__ = "GNU AGPL 3"
 __status__ = "Production"
-__version__ = "1.7.3"
+__version__ = "1.1.0"
 
 
 ##############################################################################
@@ -47,7 +47,7 @@ __version__ = "1.7.3"
 
 # package version
 # NOTE: generate a new one for each PyPI upload, otherwise it will fail
-PKG_VERSION = "1.7.3.0"
+PKG_VERSION = "1.1.0"
 
 # required packages to install
 # NOTE: always use exact version numbers
@@ -171,22 +171,22 @@ PKG_SCRIPTS = [
 ##############################################################################
 
 # package name
-PKG_NAME = "aeneas"
+PKG_NAME = "py3-aeneas"
 
 # package author
-PKG_AUTHOR = "Alberto Pettarin"
+PKG_AUTHOR = "Akhilesh"
 
 # package author email
-PKG_AUTHOR_EMAIL = "alberto@albertopettarin.it"
+PKG_AUTHOR_EMAIL = "akki.kr94@gmail.com"
 
 # package URL
-PKG_URL = "https://github.com/readbeyond/aeneas"
+PKG_URL = "https://github.com/akki2825/aeneas"
 
 # package license
 PKG_LICENSE = "GNU Affero General Public License v3 (AGPL v3)"
 
 # human-readable descriptions
-PKG_SHORT_DESCRIPTION = "aeneas is a Python/C library and a set of tools to automagically synchronize audio and text (aka forced alignment)"
+PKG_SHORT_DESCRIPTION = "py3-aeneas is a fork of aeneas"
 try:
     PKG_LONG_DESCRIPTION = io.open("README.rst", "r", encoding="utf-8").read()
 except:

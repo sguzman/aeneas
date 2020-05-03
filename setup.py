@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding=utf-8
-
 # aeneas is a Python/C library and a set of tools
 # to automagically synchronize audio and text (aka forced alignment)
 #
@@ -48,16 +45,17 @@ from setupmeta import PKG_SHORT_DESCRIPTION
 from setupmeta import PKG_URL
 from setupmeta import PKG_VERSION
 
-__author__ = "Alberto Pettarin"
-__email__ = "aeneas@readbeyond.it"
+__author__ = "akhilesh"
+__email__ = "akki.kr94@gmail.com"
 __copyright__ = """
     Copyright 2012-2013, Alberto Pettarin (www.albertopettarin.it)
     Copyright 2013-2015, ReadBeyond Srl   (www.readbeyond.it)
     Copyright 2015-2017, Alberto Pettarin (www.albertopettarin.it)
+    Copyright 2020, Akhilesh
 """
 __license__ = "GNU AGPL 3"
 __status__ = "Production"
-__version__ = "1.7.3"
+__version__ = "1.1.0"
 
 
 ##############################################################################
