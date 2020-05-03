@@ -11,6 +11,7 @@ build
 dist
 docs/build
 tmp
+py3_aeneas.egg-info
 
 # service scripts
 zzz
@@ -22,4 +23,3 @@ zzz_long_tests
 .project
 .pydevproject
 .settings
-
