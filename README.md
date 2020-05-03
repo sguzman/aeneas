@@ -1,104 +1,20 @@
-# aeneas
+# python3-aeneas
 
-**aeneas** is a Python/C library and a set of tools to automagically synchronize audio and text (aka forced alignment).
-
-* Version: 1.7.3
-* Date: 2017-03-15
-* Developed by: [ReadBeyond](http://www.readbeyond.it/)
-* Lead Developer: [Alberto Pettarin](http://www.albertopettarin.it/)
-* License: the GNU Affero General Public License Version 3 (AGPL v3)
-* Contact: [aeneas@readbeyond.it](mailto:aeneas@readbeyond.it)
-* Quick Links: [Home](http://www.readbeyond.it/aeneas/) - [GitHub](https://github.com/readbeyond/aeneas/) - [PyPI](https://pypi.python.org/pypi/aeneas/) - [Docs](http://www.readbeyond.it/aeneas/docs/) - [Tutorial](http://www.readbeyond.it/aeneas/docs/clitutorial.html) - [Benchmark](https://readbeyond.github.io/aeneas-benchmark/) - [Mailing List](https://groups.google.com/d/forum/aeneas-forced-alignment) - [Web App](http://aeneasweb.org)
-
-
-## Goal
-
-**aeneas** automatically generates a **synchronization map**
-between a list of text fragments
-and an audio file containing the narration of the text.
-In computer science this task is known as
-(automatically computing a) **forced alignment**.
-
-For example, given
-[this text file](https://raw.githubusercontent.com/readbeyond/aeneas/master/aeneas/tests/res/container/job/assets/p001.xhtml)
-and
-[this audio file](https://raw.githubusercontent.com/readbeyond/aeneas/master/aeneas/tests/res/container/job/assets/p001.mp3),
-**aeneas** determines, for each fragment, the corresponding time interval in the audio file:
-
-```
-1                                                     => [00:00:00.000, 00:00:02.640]
-From fairest creatures we desire increase,            => [00:00:02.640, 00:00:05.880]
-That thereby beauty's rose might never die,           => [00:00:05.880, 00:00:09.240]
-But as the riper should by time decease,              => [00:00:09.240, 00:00:11.920]
-His tender heir might bear his memory:                => [00:00:11.920, 00:00:15.280]
-But thou contracted to thine own bright eyes,         => [00:00:15.280, 00:00:18.800]
-Feed'st thy light's flame with self-substantial fuel, => [00:00:18.800, 00:00:22.760]
-Making a famine where abundance lies,                 => [00:00:22.760, 00:00:25.680]
-Thy self thy foe, to thy sweet self too cruel:        => [00:00:25.680, 00:00:31.240]
-Thou that art now the world's fresh ornament,         => [00:00:31.240, 00:00:34.400]
-And only herald to the gaudy spring,                  => [00:00:34.400, 00:00:36.920]
-Within thine own bud buriest thy content,             => [00:00:36.920, 00:00:40.640]
-And tender churl mak'st waste in niggarding:          => [00:00:40.640, 00:00:43.640]
-Pity the world, or else this glutton be,              => [00:00:43.640, 00:00:48.080]
-To eat the world's due, by the grave and thee.        => [00:00:48.080, 00:00:53.240]
-```
-
-![Waveform with aligned labels, detail](wiki/align.png)
-
-This synchronization map can be output to file
-in several formats, depending on its application:
-
-* research: Audacity (AUD), ELAN (EAF), TextGrid;
-* digital publishing: SMIL for EPUB 3;
-* closed captioning: SubRip (SRT), SubViewer (SBV/SUB), TTML, WebVTT (VTT);
-* Web: JSON;
-* further processing: CSV, SSV, TSV, TXT, XML.
-
+**python3-aeneas** is a fork of [aeneas](https://github.com/readbeyond/aeneas)
 
 ## System Requirements, Supported Platforms and Installation
 
 ### System Requirements
 
 1. a reasonably recent machine (recommended 4 GB RAM, 2 GHz 64bit CPU)
-2. [Python](https://python.org/) 2.7 (Linux, OS X, Windows) or 3.5 or later (Linux, OS X)
+2. [Python](https://python.org/) 3.6+ (Linux, OS X, Windows) or 3.5 or later (Linux, OS X)
 3. [FFmpeg](https://www.ffmpeg.org/)
 4. [eSpeak](http://espeak.sourceforge.net/)
 5. Python packages `BeautifulSoup4`, `lxml`, and `numpy`
 6. Python headers to compile the Python C/C++ extensions (optional but strongly recommended)
 7. A shell supporting UTF-8 (optional but strongly recommended)
 
-### Supported Platforms
-
-**aeneas** has been developed and tested on **Debian 64bit**,
-with **Python 2.7** and **Python 3.5**,
-which are the **only supported platforms** at the moment.
-Nevertheless, **aeneas** has been confirmed to work on
-other Linux distributions, Mac OS X, and Windows.
-See the
-[PLATFORMS file](https://github.com/readbeyond/aeneas/blob/master/wiki/PLATFORMS.md)
-for details.
-
-If installing **aeneas** natively on your OS proves difficult,
-you are strongly encouraged to use
-[aeneas-vagrant](https://github.com/readbeyond/aeneas-vagrant),
-which provides **aeneas** inside a virtualized Debian image
-running under
-[VirtualBox](https://www.virtualbox.org/)
-and
-[Vagrant](http://www.vagrantup.com/),
-which can be installed on any modern OS (Linux, Mac OS X, Windows).
-
 ### Installation
-
-All-in-one installers are available for Mac OS X and Windows,
-and a Bash script for deb-based Linux distributions (Debian, Ubuntu)
-is provided in this repository.
-It is also possible to download a VirtualBox+Vagrant virtual machine.
-Please see the
-[INSTALL file](https://github.com/readbeyond/aeneas/blob/master/wiki/INSTALL.md)
-for detailed, step-by-step installation procedures for different operating systems.
-
-The generic OS-independent procedure is simple:
 
 1. **Install**
    [Python](https://python.org/) (2.7.x preferred),
@@ -112,7 +28,7 @@ The generic OS-independent procedure is simple:
 
     ```bash
     pip install numpy
-    pip install aeneas
+    python setup.py install
     ```
 
 4. To **check** whether you installed **aeneas** correctly, run:
