@@ -1,6 +1,6 @@
 # aeneas
 
-fork of [aeneas](https://github.com/readbeyond/aeneas) in python3.
+fork of [aeneas](https://github.com/readbeyond/aeneas) that supports python3.6+.
 
 ## System Requirements, Supported Platforms and Installation
 
@@ -28,7 +28,7 @@ fork of [aeneas](https://github.com/readbeyond/aeneas) in python3.
 
     ```bash
     pip install numpy
-    python setup.py install
+    pip install py3-aeneas
     ```
 
 4. To **check** whether you installed **aeneas** correctly, run:
