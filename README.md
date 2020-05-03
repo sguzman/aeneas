@@ -1,6 +1,6 @@
-# python3-aeneas
+# aeneas
 
-**python3-aeneas** is a fork of [aeneas](https://github.com/readbeyond/aeneas)
+fork of [aeneas](https://github.com/readbeyond/aeneas) in python3.
 
 ## System Requirements, Supported Platforms and Installation
 
@@ -17,7 +17,7 @@
 ### Installation
 
 1. **Install**
-   [Python](https://python.org/) (2.7.x preferred),
+   [Python](https://python.org/) (3.6+ preferred),
    [FFmpeg](https://www.ffmpeg.org/), and
    [eSpeak](http://espeak.sourceforge.net/)
 
