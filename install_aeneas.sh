@@ -29,8 +29,9 @@ cd aeneas/
 echo "Checking for python version..."
 python_version=$(python -V 2>&1)
 version=$(echo $python_version | awk '{print $2}')
+desired_py_version=3
 
-if [ "$version" < 3 ]; then
+if [[ $version_split -lt $desired_py_version ]]; then
     echo "Installing newest python version..."
     if [ "$platform" = 'linux' ]; then
         os=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
@@ -39,7 +40,7 @@ if [ "$version" < 3 ]; then
             sudo apt install python3 python3-pip
         fi
     elif [ "$platform" = 'Darwin' ]; then
-        brew install python
+        brew install python3
     fi
 fi
 
@@ -52,7 +53,7 @@ if [ "$platform" = 'linux' ]; then
             echo "Installing ffmpeg..."
             sudo apt install ffmpeg
             echo "Installing espeak..."
-            sudo apt install espeak
+            sudo apt install espeak && espeak-datA
         fi
     elif [ "$platform" = 'Darwin' ]; then
         echo "Installing Python dev dependencies..."
@@ -61,7 +62,6 @@ if [ "$platform" = 'linux' ]; then
         brew install ffmpeg
         echo "Installing espeak..."
         brew install espeak
-    fi
 fi
 
 echo "Installing python packages..."
