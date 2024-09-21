@@ -187,7 +187,6 @@ FORCE_CFW = os.getenv("AENEAS_FORCE_CFW", "False") in TRUE_VALUES
 # try importing numpy: if it fails, warn user and exit
 try:
     from numpy import get_include
-    from numpy.distutils import misc_util
 except ImportError:
     print("[ERRO] You must install numpy before installing aeneas")
     print("[INFO] Try the following command:")
@@ -195,7 +194,7 @@ except ImportError:
     sys.exit(1)
 
 # to compile cdtw and cmfcc, we need to include the NumPy dirs
-INCLUDE_DIRS = [misc_util.get_numpy_include_dirs()]
+INCLUDE_DIRS = [get_include()]
 
 # scripts to be installed globally
 # on Linux and Mac OS X, use the file without extension
